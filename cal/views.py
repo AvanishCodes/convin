@@ -72,10 +72,8 @@ class GoogleCalendarRedirectView(APIView):
     def get(self, request, *args, **kwargs):
         # Specify the state when creating the flow in the callback so that it can
         # verified in the authorization server response.
-        print(request)
         # state = request.session['state']
         state = request.GET.get('state')
-        print(state)
 
         flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
             CLIENT_SECRETS_FILE, scopes=SCOPES, state=state)
@@ -121,7 +119,6 @@ class GoogleCalendarRedirectView(APIView):
             if temp_events:
                 for event in temp_events:
                     events.append(event)
-        print(events)
 
         events_list_append = []
         # Save the events in a json file
@@ -129,7 +126,6 @@ class GoogleCalendarRedirectView(APIView):
         # json_file.write(str(events))
         # json_file.close()
         if not events:
-            print('No data found.')
             return Response({"message": "No data found or user credentials invalid."})
         else:
             for events_list in events:
