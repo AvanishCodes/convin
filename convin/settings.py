@@ -124,9 +124,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-# GOOGLE_CLIENT_ID = "724465866383-lkcuc5tt2hvfdp47sgm4tn1hblqmstj8.apps.googleusercontent.com"
-# GOOGLE_REDIRECT_URI= "http://localhost:8000/rest/v1/calendar/redirect/"
-# GOOGLE_CLIENT_SECRET="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"
 
 import environ
 
