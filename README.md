@@ -35,3 +35,5 @@ You can test the integration by sending GET requests to the URLs that trigger th
 3. After granting access, the browser will redirect you to the URL for the GoogleCalendarRedirectView.
 
 4. The view will handle the redirect request, get the access_token, and get the list of events in the user's calendar. The view will return the list of events in the response in json format.
+
+### [Demo Video](./ConvIn%20Assignment%20Demonstration.mp4)
